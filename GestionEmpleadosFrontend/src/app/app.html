@@ -1,1 +1,17 @@
-<router-outlet></router-outlet>
+<div class="layout">
+  <header class="topbar">
+    <div class="brand">
+      <h1>Sistema de Gestión de Empleados</h1>
+      <p>Backend .NET + Frontend Angular</p>
+    </div>
+    <nav class="nav-links">
+      <a routerLink="/departamentos" routerLinkActive="active">Departamentos</a>
+      <a routerLink="/empleados" routerLinkActive="active">Empleados</a>
+      <a routerLink="/asignaciones" routerLinkActive="active">Asignaciones</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

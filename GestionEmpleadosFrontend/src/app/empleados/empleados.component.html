@@ -1,0 +1,96 @@
+<div class="page-header">
+  <h2>Gestión de Empleados</h2>
+  <p>Registra y actualiza los datos de los colaboradores.</p>
+</div>
+
+<section class="form-section">
+  <h3>{{ form.empleado_id ? 'Editar empleado' : 'Nuevo empleado' }}</h3>
+  <form (ngSubmit)="guardarEmpleado()" #empleadoForm="ngForm">
+    <div class="form-grid">
+      <label>
+        Nombre
+        <input
+          name="nombre"
+          [(ngModel)]="form.nombre"
+          required
+          placeholder="Nombre"
+        />
+      </label>
+
+      <label>
+        Apellido
+        <input
+          name="apellido"
+          [(ngModel)]="form.apellido"
+          required
+          placeholder="Apellido"
+        />
+      </label>
+
+      <label>
+        Correo electrónico
+        <input
+          name="email"
+          type="email"
+          [(ngModel)]="form.email"
+          required
+          placeholder="correo@empresa.com"
+        />
+      </label>
+
+      <label>
+        Teléfono
+        <input
+          name="telefono"
+          [(ngModel)]="form.telefono"
+          placeholder="Teléfono de contacto"
+        />
+      </label>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="empleadoForm.invalid || saving">
+        {{ form.empleado_id ? 'Actualizar' : 'Registrar' }}
+      </button>
+      <button type="button" class="secondary" (click)="cancelarEdicion()" *ngIf="form.empleado_id">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</section>
+
+<section class="list-section">
+  <div class="section-header">
+    <h3>Empleados registrados</h3>
+    <button type="button" class="refresh" (click)="cargarEmpleados()">Actualizar lista</button>
+  </div>
+
+  <div *ngIf="loading" class="info">Cargando empleados...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <table *ngIf="empleados.length" class="data-table">
+    <thead>
+      <tr>
+        <th>Nombre completo</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th class="actions">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados">
+        <td>{{ empleado.nombre }} {{ empleado.apellido }}</td>
+        <td>{{ empleado.email }}</td>
+        <td>{{ empleado.telefono || 'N/D' }}</td>
+        <td class="actions">
+          <button type="button" (click)="editarEmpleado(empleado)">Editar</button>
+          <button type="button" class="danger" (click)="eliminarEmpleado(empleado)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && !empleados.length" class="info">
+    No hay empleados registrados todavía.
+  </div>
+</section>

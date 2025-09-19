@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Asignacion, AsignacionCreate, AsignacionUpdate } from '../models/asignacion.model';
-import { API_CONFIG } from './api.config';
+import { getApiBaseUrl } from './api.config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AsignacionService {
-  private apiUrl = `${API_CONFIG.baseUrl}/asignaciones`;
+  private get apiUrl(): string {
+    return `${getApiBaseUrl()}/asignaciones`;
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -28,8 +30,8 @@ export class AsignacionService {
   }
 
   // PUT - Actualizar asignación
-  updateAsignacion(id: number, asignacion: AsignacionUpdate): Observable<Asignacion> {
-    return this.http.put<Asignacion>(`${this.apiUrl}/${id}`, asignacion);
+  updateAsignacion(id: number, asignacion: AsignacionUpdate): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/${id}`, asignacion);
   }
 
   // DELETE - Eliminar asignación

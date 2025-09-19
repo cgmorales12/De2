@@ -1,0 +1,257 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\migrations\\20250919150814_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:migrations\\20250919150814_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\models\\empleadomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:models\\empleadomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\gestionempleados.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:gestionempleados.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\controllers\\asignacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:controllers\\asignacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\controllers\\departamentoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:controllers\\departamentoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\data\\empleadosdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:data\\empleadosdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\models\\dtos\\departamentodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:models\\dtos\\departamentodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\models\\dtos\\asignaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:models\\dtos\\asignaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\models\\dtos\\empleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:models\\dtos\\empleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\models\\asignacionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:models\\asignacionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|c:\\users\\cmg\\downloads\\gestionempleados\\gestionempleados\\models\\departamentomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8BAD7D-485F-432B-A6C2-4C25A387739C}|GestionEmpleados.csproj|solutionrelative:models\\departamentomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250919150814_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Migrations\\20250919150814_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250919150814_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Migrations\\20250919150814_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20250919150814_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T15:08:15.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AsignacionesController.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Controllers\\AsignacionesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AsignacionesController.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Controllers\\AsignacionesController.cs",
+              "RelativeToolTip": "Controllers\\AsignacionesController.cs",
+              "ViewState": "AgIAAMwAAAAAAAAAAAAqwNgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T15:05:22.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmpleadosController.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Controllers\\EmpleadosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpleadosController.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Controllers\\EmpleadosController.cs",
+              "RelativeToolTip": "Controllers\\EmpleadosController.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAqwLUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T15:04:42.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DepartamentosController.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Controllers\\DepartamentosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DepartamentosController.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Controllers\\DepartamentosController.cs",
+              "RelativeToolTip": "Controllers\\DepartamentosController.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAqwKcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T15:03:46.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-19T15:00:35.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAqwC4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T15:00:10.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GestionEmpleados.csproj",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\GestionEmpleados.csproj",
+              "RelativeDocumentMoniker": "GestionEmpleados.csproj",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\GestionEmpleados.csproj",
+              "RelativeToolTip": "GestionEmpleados.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-19T09:26:55.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmpleadoModel.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\EmpleadoModel.cs",
+              "RelativeDocumentMoniker": "Models\\EmpleadoModel.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\EmpleadoModel.cs",
+              "RelativeToolTip": "Models\\EmpleadoModel.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T09:33:43.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmpleadosDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Data\\EmpleadosDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\EmpleadosDbContext.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Data\\EmpleadosDbContext.cs",
+              "RelativeToolTip": "Data\\EmpleadosDbContext.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAqwEgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T14:59:40.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AsignacionDto.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\Dtos\\AsignacionDto.cs",
+              "RelativeDocumentMoniker": "Models\\Dtos\\AsignacionDto.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\Dtos\\AsignacionDto.cs",
+              "RelativeToolTip": "Models\\Dtos\\AsignacionDto.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwBoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T14:58:14.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmpleadoDto.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\Dtos\\EmpleadoDto.cs",
+              "RelativeDocumentMoniker": "Models\\Dtos\\EmpleadoDto.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\Dtos\\EmpleadoDto.cs",
+              "RelativeToolTip": "Models\\Dtos\\EmpleadoDto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA6wB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T14:57:23.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DepartamentoDto.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\Dtos\\DepartamentoDto.cs",
+              "RelativeDocumentMoniker": "Models\\Dtos\\DepartamentoDto.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\Dtos\\DepartamentoDto.cs",
+              "RelativeToolTip": "Models\\Dtos\\DepartamentoDto.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T14:56:25.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AsignacionModel.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\AsignacionModel.cs",
+              "RelativeDocumentMoniker": "Models\\AsignacionModel.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\AsignacionModel.cs",
+              "RelativeToolTip": "Models\\AsignacionModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T09:37:48.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DepartamentoModel.cs",
+              "DocumentMoniker": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\DepartamentoModel.cs",
+              "RelativeDocumentMoniker": "Models\\DepartamentoModel.cs",
+              "ToolTip": "C:\\Users\\CMG\\Downloads\\GestionEmpleados\\GestionEmpleados\\Models\\DepartamentoModel.cs",
+              "RelativeToolTip": "Models\\DepartamentoModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T09:31:10.521Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

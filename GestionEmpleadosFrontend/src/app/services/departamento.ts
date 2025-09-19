@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Departamento, DepartamentoCreate, DepartamentoUpdate } from '../models/departamento.model';
-import { API_CONFIG } from './api.config';
+import { getApiBaseUrl } from './api.config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DepartamentoService {
-  private apiUrl = `${API_CONFIG.baseUrl}/departamentos`;
+  private get apiUrl(): string {
+    return `${getApiBaseUrl()}/departamentos`;
+  }
 
   constructor(private http: HttpClient) { }
 

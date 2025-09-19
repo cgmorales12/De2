@@ -5,11 +5,12 @@ import { EmpleadoService } from '../services/empleado';
 import { Departamento } from '../models/departamento.model';
 import { Empleado } from '../models/empleado.model';
 import { API_CONFIG } from '../services/api.config';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-test-connection',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   template: `
     <div class="container mt-4">
       <h2>🔗 Prueba de Conexión Backend - Frontend</h2>
@@ -86,6 +87,30 @@ import { API_CONFIG } from '../services/api.config';
             </div>
             <div class="card-body">
               <p><strong>URL del Backend:</strong> {{ backendUrl }}</p>
+              <div class="row g-2 align-items-end">
+                <div class="col-md-6">
+                  <label for="backendUrlSelect" class="form-label">Selecciona la URL a utilizar</label>
+                  <select
+                    id="backendUrlSelect"
+                    class="form-select"
+                    [(ngModel)]="backendUrl"
+                    (ngModelChange)="onBackendUrlChange($event)"
+                  >
+                    <option *ngFor="let option of backendOptions" [ngValue]="option.url">
+                      {{ option.label }} - {{ option.url }}
+                    </option>
+                  </select>
+                  <small class="text-muted">La selección se guarda en este navegador.</small>
+                </div>
+                <div class="col-md-6 d-flex gap-2">
+                  <button type="button" class="btn btn-outline-secondary" (click)="resetBackendUrl()">
+                    Restaurar detección automática
+                  </button>
+                  <button type="button" class="btn btn-outline-primary" (click)="probarNuevamente()">
+                    Probar nuevamente
+                  </button>
+                </div>
+              </div>
               <p><strong>Estado:</strong>
                 <span *ngIf="!error && !errorEmpleados" class="text-success">✅ Conexión OK</span>
                 <span *ngIf="error || errorEmpleados" class="text-danger">❌ Error de conexión</span>
@@ -113,6 +138,7 @@ export class TestConnectionComponent implements OnInit {
   loadingEmpleados = false;
   error: string | null = null;
   errorEmpleados: string | null = null;
+  backendOptions = API_CONFIG.availableUrls;
   backendUrl = API_CONFIG.baseUrl;
 
   constructor(
@@ -122,6 +148,23 @@ export class TestConnectionComponent implements OnInit {
 
   ngOnInit(): void {
     // Cargar datos automáticamente al iniciar
+    this.cargarDepartamentos();
+    this.cargarEmpleados();
+  }
+
+  onBackendUrlChange(url: string): void {
+    API_CONFIG.setBaseUrl(url);
+    this.backendUrl = API_CONFIG.baseUrl;
+    this.probarNuevamente();
+  }
+
+  resetBackendUrl(): void {
+    API_CONFIG.clearStoredBaseUrl();
+    this.backendUrl = API_CONFIG.baseUrl;
+    this.probarNuevamente();
+  }
+
+  probarNuevamente(): void {
     this.cargarDepartamentos();
     this.cargarEmpleados();
   }
@@ -164,7 +207,7 @@ export class TestConnectionComponent implements OnInit {
 
   private parseError(err: any, recurso: string): string {
     if (err?.status === 0) {
-      return `No fue posible conectar con el backend al consultar ${recurso}. Verifica que la API esté en ejecución y que la URL ${this.backendUrl} sea accesible.`;
+      return `No fue posible conectar con el backend al consultar ${recurso}. Verifica que la API esté en ejecución e intenta con la opción "HTTPS (puerto 7061)" si tu backend usa certificados de desarrollo o selecciona la URL correcta en la lista.`;
     }
 
     if (err?.error instanceof ErrorEvent) {

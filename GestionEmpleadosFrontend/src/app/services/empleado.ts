@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Empleado, EmpleadoCreate, EmpleadoUpdate } from '../models/empleado.model';
-import { API_CONFIG } from './api.config';
+import { getApiBaseUrl } from './api.config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmpleadoService {
-  private apiUrl = `${API_CONFIG.baseUrl}/empleados`;
+  private get apiUrl(): string {
+    return `${getApiBaseUrl()}/empleados`;
+  }
 
   constructor(private http: HttpClient) { }
 

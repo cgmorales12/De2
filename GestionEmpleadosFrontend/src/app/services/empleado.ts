@@ -30,8 +30,8 @@ export class EmpleadoService {
   }
 
   // PUT - Actualizar empleado
-  updateEmpleado(id: number, empleado: EmpleadoUpdate): Observable<Empleado> {
-    return this.http.put<Empleado>(`${this.apiUrl}/${id}`, empleado);
+  updateEmpleado(id: number, empleado: EmpleadoUpdate): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/${id}`, empleado);
   }
 
   // DELETE - Eliminar empleado

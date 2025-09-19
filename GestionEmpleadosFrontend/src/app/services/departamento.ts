@@ -30,8 +30,8 @@ export class DepartamentoService {
   }
 
   // PUT - Actualizar departamento
-  updateDepartamento(id: number, departamento: DepartamentoUpdate): Observable<Departamento> {
-    return this.http.put<Departamento>(`${this.apiUrl}/${id}`, departamento);
+  updateDepartamento(id: number, departamento: DepartamentoUpdate): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/${id}`, departamento);
   }
 
   // DELETE - Eliminar departamento

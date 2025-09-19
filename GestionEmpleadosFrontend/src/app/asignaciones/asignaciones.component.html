@@ -1,0 +1,81 @@
+<div class="page-header">
+  <h2>Asignaciones de empleados</h2>
+  <p>Controla qué colaboradores pertenecen a cada departamento.</p>
+</div>
+
+<section class="form-section">
+  <h3>Nueva asignación</h3>
+  <form (ngSubmit)="crearAsignacion()" #asignacionForm="ngForm">
+    <div class="form-grid">
+      <label>
+        Empleado
+        <select name="empleado" [(ngModel)]="form.empleado_id" required>
+          <option [ngValue]="null">Selecciona un empleado</option>
+          <option *ngFor="let empleado of empleados" [ngValue]="empleado.empleado_id">
+            {{ empleado.nombre }} {{ empleado.apellido }}
+          </option>
+        </select>
+      </label>
+
+      <label>
+        Departamento
+        <select name="departamento" [(ngModel)]="form.departamento_id" required>
+          <option [ngValue]="null">Selecciona un departamento</option>
+          <option *ngFor="let departamento of departamentos" [ngValue]="departamento.departamento_id">
+            {{ departamento.nombre }}
+          </option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="asignacionForm.invalid || saving">Crear asignación</button>
+      <button type="button" class="refresh" (click)="cargarDatos()">Actualizar datos</button>
+    </div>
+  </form>
+</section>
+
+<section class="list-section">
+  <h3>Asignaciones vigentes</h3>
+
+  <div *ngIf="loading" class="info">Cargando asignaciones...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <table *ngIf="asignaciones.length" class="data-table">
+    <thead>
+      <tr>
+        <th>Empleado</th>
+        <th>Departamento</th>
+        <th>Fecha</th>
+        <th>Estado</th>
+        <th class="actions">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let asignacion of asignaciones">
+        <td>{{ asignacion.empleado_nombre_completo }}</td>
+        <td>{{ asignacion.departamento_nombre }}</td>
+        <td>{{ asignacion.fecha_asignacion | date: 'shortDate' }}</td>
+        <td>
+          <span class="badge" [class.active]="asignacion.estado === 'Activa'">
+            {{ asignacion.estado }}
+          </span>
+        </td>
+        <td class="actions">
+          <button
+            type="button"
+            class="secondary"
+            (click)="actualizarEstado(asignacion, asignacion.estado === 'Activa' ? 'Inactiva' : 'Activa')"
+          >
+            {{ asignacion.estado === 'Activa' ? 'Finalizar' : 'Reactivar' }}
+          </button>
+          <button type="button" class="danger" (click)="eliminarAsignacion(asignacion)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && !asignaciones.length" class="info">
+    No hay asignaciones registradas todavía.
+  </div>
+</section>

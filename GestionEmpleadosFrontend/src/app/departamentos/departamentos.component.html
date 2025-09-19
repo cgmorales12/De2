@@ -1,0 +1,96 @@
+<div class="page-header">
+  <h2>Gestión de Departamentos</h2>
+  <p>Administra la información de los departamentos de la organización.</p>
+</div>
+
+<section class="form-section">
+  <h3>{{ form.departamento_id ? 'Editar departamento' : 'Nuevo departamento' }}</h3>
+  <form (ngSubmit)="guardarDepartamento()" #departamentoForm="ngForm">
+    <div class="form-grid">
+      <label>
+        Nombre
+        <input
+          name="nombre"
+          [(ngModel)]="form.nombre"
+          required
+          placeholder="Departamento"
+        />
+      </label>
+
+      <label>
+        Ubicación
+        <input
+          name="ubicacion"
+          [(ngModel)]="form.ubicacion"
+          required
+          placeholder="Ubicación"
+        />
+      </label>
+
+      <label>
+        Jefe del departamento
+        <input
+          name="jefe_departamento"
+          [(ngModel)]="form.jefe_departamento"
+          placeholder="Nombre del responsable"
+        />
+      </label>
+
+      <label>
+        Extensión
+        <input
+          name="extension"
+          [(ngModel)]="form.extension"
+          placeholder="Ext. telefónica"
+        />
+      </label>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="departamentoForm.invalid || saving">
+        {{ form.departamento_id ? 'Actualizar' : 'Registrar' }}
+      </button>
+      <button type="button" class="secondary" (click)="cancelarEdicion()" *ngIf="form.departamento_id">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</section>
+
+<section class="list-section">
+  <div class="section-header">
+    <h3>Departamentos registrados</h3>
+    <button type="button" class="refresh" (click)="cargarDepartamentos()">Actualizar lista</button>
+  </div>
+
+  <div *ngIf="loading" class="info">Cargando departamentos...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <table *ngIf="departamentos.length" class="data-table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Ubicación</th>
+        <th>Jefe</th>
+        <th>Extensión</th>
+        <th class="actions">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let departamento of departamentos">
+        <td>{{ departamento.nombre }}</td>
+        <td>{{ departamento.ubicacion }}</td>
+        <td>{{ departamento.jefe_departamento || 'Sin asignar' }}</td>
+        <td>{{ departamento.extension || 'N/D' }}</td>
+        <td class="actions">
+          <button type="button" (click)="editarDepartamento(departamento)">Editar</button>
+          <button type="button" class="danger" (click)="eliminarDepartamento(departamento)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && !departamentos.length" class="info">
+    No hay departamentos registrados todavía.
+  </div>
+</section>

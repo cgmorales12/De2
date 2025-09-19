@@ -1,0 +1,15 @@
+@import '../departamentos/departamentos.component.css';
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 9999px;
+  background-color: #94a3b8;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge.active {
+  background-color: #16a34a;
+}

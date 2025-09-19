@@ -30,8 +30,8 @@ export class AsignacionService {
   }
 
   // PUT - Actualizar asignación
-  updateAsignacion(id: number, asignacion: AsignacionUpdate): Observable<Asignacion> {
-    return this.http.put<Asignacion>(`${this.apiUrl}/${id}`, asignacion);
+  updateAsignacion(id: number, asignacion: AsignacionUpdate): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/${id}`, asignacion);
   }
 
   // DELETE - Eliminar asignación

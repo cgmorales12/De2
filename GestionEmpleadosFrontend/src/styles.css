@@ -1,0 +1,21 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Estilos globales adicionales */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn-custom {
+  margin: 5px;
+}
+
+.table-custom {
+  margin-top: 20px;
+}
+
+.form-custom {
+  max-width: 600px;
+  margin: 0 auto;
+}

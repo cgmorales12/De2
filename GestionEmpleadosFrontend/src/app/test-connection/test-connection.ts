@@ -1,0 +1,163 @@
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DepartamentoService } from '../services/departamento';
+import { EmpleadoService } from '../services/empleado';
+import { Departamento } from '../models/departamento.model';
+import { Empleado } from '../models/empleado.model';
+
+@Component({
+  selector: 'app-test-connection',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    <div class="container mt-4">
+      <h2>🔗 Prueba de Conexión Backend - Frontend</h2>
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h5>📋 Departamentos</h5>
+            </div>
+            <div class="card-body">
+              <button class="btn btn-primary mb-3" (click)="cargarDepartamentos()">
+                Cargar Departamentos
+              </button>
+              
+              <div *ngIf="loading" class="text-info">
+                Cargando...
+              </div>
+              
+              <div *ngIf="error" class="alert alert-danger">
+                Error: {{ error }}
+              </div>
+              
+              <div *ngIf="departamentos.length > 0">
+                <h6>Total: {{ departamentos.length }} departamentos</h6>
+                <ul class="list-group">
+                  <li *ngFor="let dept of departamentos" class="list-group-item">
+                    <strong>{{ dept.nombre }}</strong><br>
+                    <small>{{ dept.ubicacion }} - {{ dept.jefe_departamento }}</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h5>👥 Empleados</h5>
+            </div>
+            <div class="card-body">
+              <button class="btn btn-success mb-3" (click)="cargarEmpleados()">
+                Cargar Empleados
+              </button>
+              
+              <div *ngIf="loadingEmpleados" class="text-info">
+                Cargando empleados...
+              </div>
+              
+              <div *ngIf="errorEmpleados" class="alert alert-danger">
+                Error: {{ errorEmpleados }}
+              </div>
+              
+              <div *ngIf="empleados.length > 0">
+                <h6>Total: {{ empleados.length }} empleados</h6>
+                <ul class="list-group">
+                  <li *ngFor="let emp of empleados" class="list-group-item">
+                    <strong>{{ emp.nombre }} {{ emp.apellido }}</strong><br>
+                    <small>{{ emp.email }} - {{ emp.telefono }}</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h5>ℹ️ Estado de la Conexión</h5>
+            </div>
+            <div class="card-body">
+              <p><strong>URL del Backend:</strong> {{ backendUrl }}</p>
+              <p><strong>Estado:</strong> 
+                <span *ngIf="!error && !errorEmpleados" class="text-success">✅ Conexión OK</span>
+                <span *ngIf="error || errorEmpleados" class="text-danger">❌ Error de conexión</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+  styles: [`
+    .card {
+      margin-bottom: 20px;
+    }
+    .list-group-item {
+      border: 1px solid #dee2e6;
+      margin-bottom: 5px;
+    }
+  `]
+})
+export class TestConnectionComponent implements OnInit {
+  departamentos: Departamento[] = [];
+  empleados: Empleado[] = [];
+  loading = false;
+  loadingEmpleados = false;
+  error: string | null = null;
+  errorEmpleados: string | null = null;
+  backendUrl = 'http://localhost:7061/api';
+
+  constructor(
+    private departamentoService: DepartamentoService,
+    private empleadoService: EmpleadoService
+  ) {}
+
+  ngOnInit(): void {
+    // Cargar datos automáticamente al iniciar
+    this.cargarDepartamentos();
+    this.cargarEmpleados();
+  }
+
+  cargarDepartamentos(): void {
+    this.loading = true;
+    this.error = null;
+    
+    this.departamentoService.getDepartamentos().subscribe({
+      next: (data) => {
+        this.departamentos = data;
+        this.loading = false;
+        console.log('Departamentos cargados:', data);
+      },
+      error: (err) => {
+        this.error = `Error al cargar departamentos: ${err.message}`;
+        this.loading = false;
+        console.error('Error:', err);
+      }
+    });
+  }
+
+  cargarEmpleados(): void {
+    this.loadingEmpleados = true;
+    this.errorEmpleados = null;
+    
+    this.empleadoService.getEmpleados().subscribe({
+      next: (data) => {
+        this.empleados = data;
+        this.loadingEmpleados = false;
+        console.log('Empleados cargados:', data);
+      },
+      error: (err) => {
+        this.errorEmpleados = `Error al cargar empleados: ${err.message}`;
+        this.loadingEmpleados = false;
+        console.error('Error:', err);
+      }
+    });
+  }
+}

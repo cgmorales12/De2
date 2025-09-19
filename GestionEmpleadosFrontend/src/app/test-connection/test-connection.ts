@@ -4,6 +4,7 @@ import { DepartamentoService } from '../services/departamento';
 import { EmpleadoService } from '../services/empleado';
 import { Departamento } from '../models/departamento.model';
 import { Empleado } from '../models/empleado.model';
+import { API_CONFIG } from '../services/api.config';
 
 @Component({
   selector: 'app-test-connection',
@@ -12,7 +13,7 @@ import { Empleado } from '../models/empleado.model';
   template: `
     <div class="container mt-4">
       <h2>🔗 Prueba de Conexión Backend - Frontend</h2>
-      
+
       <div class="row">
         <div class="col-md-6">
           <div class="card">
@@ -23,15 +24,15 @@ import { Empleado } from '../models/empleado.model';
               <button class="btn btn-primary mb-3" (click)="cargarDepartamentos()">
                 Cargar Departamentos
               </button>
-              
+
               <div *ngIf="loading" class="text-info">
                 Cargando...
               </div>
-              
+
               <div *ngIf="error" class="alert alert-danger">
                 Error: {{ error }}
               </div>
-              
+
               <div *ngIf="departamentos.length > 0">
                 <h6>Total: {{ departamentos.length }} departamentos</h6>
                 <ul class="list-group">
@@ -54,15 +55,15 @@ import { Empleado } from '../models/empleado.model';
               <button class="btn btn-success mb-3" (click)="cargarEmpleados()">
                 Cargar Empleados
               </button>
-              
+
               <div *ngIf="loadingEmpleados" class="text-info">
                 Cargando empleados...
               </div>
-              
+
               <div *ngIf="errorEmpleados" class="alert alert-danger">
                 Error: {{ errorEmpleados }}
               </div>
-              
+
               <div *ngIf="empleados.length > 0">
                 <h6>Total: {{ empleados.length }} empleados</h6>
                 <ul class="list-group">
@@ -85,7 +86,7 @@ import { Empleado } from '../models/empleado.model';
             </div>
             <div class="card-body">
               <p><strong>URL del Backend:</strong> {{ backendUrl }}</p>
-              <p><strong>Estado:</strong> 
+              <p><strong>Estado:</strong>
                 <span *ngIf="!error && !errorEmpleados" class="text-success">✅ Conexión OK</span>
                 <span *ngIf="error || errorEmpleados" class="text-danger">❌ Error de conexión</span>
               </p>
@@ -112,7 +113,7 @@ export class TestConnectionComponent implements OnInit {
   loadingEmpleados = false;
   error: string | null = null;
   errorEmpleados: string | null = null;
-  backendUrl = 'http://localhost:7061/api';
+  backendUrl = API_CONFIG.baseUrl;
 
   constructor(
     private departamentoService: DepartamentoService,
@@ -128,7 +129,7 @@ export class TestConnectionComponent implements OnInit {
   cargarDepartamentos(): void {
     this.loading = true;
     this.error = null;
-    
+
     this.departamentoService.getDepartamentos().subscribe({
       next: (data) => {
         this.departamentos = data;
@@ -136,7 +137,7 @@ export class TestConnectionComponent implements OnInit {
         console.log('Departamentos cargados:', data);
       },
       error: (err) => {
-        this.error = `Error al cargar departamentos: ${err.message}`;
+        this.error = this.parseError(err, 'departamentos');
         this.loading = false;
         console.error('Error:', err);
       }
@@ -146,7 +147,7 @@ export class TestConnectionComponent implements OnInit {
   cargarEmpleados(): void {
     this.loadingEmpleados = true;
     this.errorEmpleados = null;
-    
+
     this.empleadoService.getEmpleados().subscribe({
       next: (data) => {
         this.empleados = data;
@@ -154,10 +155,22 @@ export class TestConnectionComponent implements OnInit {
         console.log('Empleados cargados:', data);
       },
       error: (err) => {
-        this.errorEmpleados = `Error al cargar empleados: ${err.message}`;
+        this.errorEmpleados = this.parseError(err, 'empleados');
         this.loadingEmpleados = false;
         console.error('Error:', err);
       }
     });
+  }
+
+  private parseError(err: any, recurso: string): string {
+    if (err?.status === 0) {
+      return `No fue posible conectar con el backend al consultar ${recurso}. Verifica que la API esté en ejecución y que la URL ${this.backendUrl} sea accesible.`;
+    }
+
+    if (err?.error instanceof ErrorEvent) {
+      return `Error de red al consultar ${recurso}: ${err.error.message}`;
+    }
+
+    return `Error ${err?.status ?? 'desconocido'} al consultar ${recurso}: ${err?.message ?? 'sin mensaje adicional'}`;
   }
 }
